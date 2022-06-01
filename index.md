@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+<!DYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-You can use the [editor on GitHub](https://github.com/wtliu7/wtliu7.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+  <title>Xiaoman Zhang</title>
+  
+  <meta name="author" content="Xiaoman Zhang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name> Xiaoman Zhang</name>
+              </p>
+              <p>I am a PhD student working on medical image analysis and machine learning at <a href="https://mediabrain.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
+		      I received my bachelor degree from <a href='https://www.ustc.edu.cn/'> University of Science and Technology of China (USTC)</a> in June 2019. 
+              </p>
+	      <p>
+		      My current research interest is in self-supervised learning for medical image analysis.
+              </p>      
+		    
+              <p style="text-align:center">
+                <a href="xm99sjtu@sjtu.edu.cn">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=Zno4WggAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://github.com/xiaoman-zhang/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="image/Xiaoman.png"><img style="width:100%;max-width:100%" alt="profile photo" src="image/Xiaoman_circle.png" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+	</tbody></table>
+	<br />
+		
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <heading><b></bold>Research</b></heading>
+	  <tr onmouseout="sar_stop()" onmouseover="sar_start()">
+            <td style="padding:0px;width:40%;vertical-align:middle">
+              <img src="image/SAR.jpg" width="200" height="80" style="border-style: none">
+            </td>
+            <td style="padding:10px;width:60%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2010.06107/">
+                <papertitle>SAR: Scale-Aware Restoration Learning for 3D Tumor Segmentation</papertitle>
+              </a>
+              <br>
+              <strong>Xiaoman Zhang</strong>,
+              <a href="https://scholar.google.com/citations?hl=en&user=Yo-RbKIAAAAJ">Shixiang Feng</a>,
+              <a href="https://scholar.google.com/citations?hl=en&user=9WvLlkIAAAAJ">Yuhang Zhou</a>,
+	      <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang </a>,
+              <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+              <br>
+							<em>Medical Image Computing and Computer Assisted Interventions (MICCAI)</em>, 2021
+              <p></p>
+            </td>
+          </tr> 
+	  
+	  <tr onmouseout="ld_stop()" onmouseover="ld_start()">
+            <td style="padding:0px;width:25%;vertical-align:middle">
+              <img src="image/LD.png" width="200" height="120" style="border-style: none">
+            </td>
+            <td style="padding:10px;width:75%;vertical-align:middle">
+              <a href="https://xiaoman-zhang.github.io/Layer-Decomposition/">
+                <papertitle>Self-supervised Tumor Segmentation through Layer Decomposition</papertitle>
+              </a>
+              <br>
+              <strong>Xiaoman Zhang</strong>,
+              <a href="https://weidixie.github.io/">Weidi Xie</a>,
+              <a href="https://scholar.google.com/citations?user=BAZSE7wAAAAJ&hl=zh-CN">Chaoqin Huang</a>,
+	      <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+	      <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang </a>,
+              <br>
+							<em>arXiv</em>, 2021 (under review)
+              <p>We propose a scalable pipeline for generating synthetic tumor data, 
+		      which enables to train our self-supervised model with minimal generalisation gap with the downstream task, 
+		      supporting zero-shot tumor segmentation </p>
+            </td>
+          </tr> 
 
-### Markdown
+        </tbody></table>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+		Based on a template by <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
+                <br>
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+</body>
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wtliu7/wtliu7.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
