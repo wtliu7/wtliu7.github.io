@@ -169,13 +169,13 @@
 <body>
 	<br>
 	<center>
-	<span style="font-size:36px">Self-supervised Tumor Segmentation through Layer Decomposition</span><br><br><br>
+	<span style="font-size:36px">Transforming the Interactive Segmentation forMedical Imaging</span><br><br><br>
 	</center>
 	<table align="center" width="800px">
             <tbody><tr>
                     <td align="center" width="160px">
               <center>
-                <span style="font-size:16px"><a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a><sup>1</sup></span>
+                <span style="font-size:16px"><a href="https://wtliu7.github.io/">Wentao Liu</a><sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="160px">
@@ -184,19 +184,6 @@
                 </center>
                 </td>
                     <td align="center" width="160px">
-              <center>
-                <span style="font-size:16px"><a href="https://scholar.google.com/citations?user=BAZSE7wAAAAJ&hl=fr">Chaoqin Huang</a><sup>1</sup></span>
-                </center>
-                </td>
-                    <td align="center" width="160px">
-	      <center>
-                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a><sup>1</sup></span>
-                </center>
-		</td>
-                    <td align="center" width="160px">	    
-              <center>
-                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/">Yanfeng Wang</a><sup>1</sup></span>
-                </center>
             </tr>
 
         </tbody></table><br>
@@ -226,7 +213,7 @@
                 <center>
                   <br>
                   <span style="font-size:20px">Code
-                    <a href="https://github.com/xiaoman-zhang/Layer-Decomposition"> [GitHub]</a>
+                    <a href="https://github.com/wtliu7/TIS"> [GitHub]</a>
                   </span>
                 </center>
               </td>
@@ -255,11 +242,7 @@
       <center><h2> Abstract </h2> </center>
       <p style="text-align:justify; text-justify:inter-ideograph;">
       <left>
-	      In this paper, we target self-supervised representation learning for zero-shot tumor segmentation. We make the following contributions: 
-	<i>First</i>, we advocate a zero-shot setting, where models from pre-training should be directly applicable for the downstream task, without using any manual annotations. 
-	<i>Second</i>, we take inspiration from ``layer-decomposition", and innovate on the training regime with simulated tumor data. 
-	<i>Third</i>, we conduct extensive ablation studies to analyse the critical components in data simulation, and validate the necessity of different proxy tasks.We demonstrate that, with sufficient texture randomization in simulation, model trained on synthetic data can effortlessly generalise to segment real tumor data. 
-	<i>Forth</i>, our approach achieves superior results for zero-shot tumor segmentation on different downstream datasets, BraTS2018 for brain tumor segmentation and LiTS2017 for liver tumor segmentation. While evaluating the model transferability for tumor segmentation under a low-annotation regime, the proposed approach also outperforms all existing self-supervised approaches, opening up the usage of self-supervised learning in practical scenarios.
+	      The goal of this paper is to interactively refine the automaticsegmentation on challenging structures that fall behind human perfor-mance, either due to the scarcity of available annotations or the difficultynature of the problem itself, for example, on segmenting cancer or smallorgans. Specifically, we propose a novelTransformer-based architectureforInteractiveSegmentation (TIS), that treats the refinement task as aprocedure for grouping pixels with similar feature representation to thoseclicks given by the end users. Our proposed architecture is composedof two variants of Transformer Decoder, which naturally fulfills featurecomparison with the attention mechanisms. In contrast to existing ap-proaches, our proposed TIS is not limited to binary segmentations, andallows the user to edit the masks of arbitrary number of categories. Tovalidate the proposed approach, we conduct extensive experiments onthree challenging datasets and demonstrate superior performance overthe existing state-of-the-art methods.
       </left></p>
       <p><img class="left"  src="./resources/framework.png" width="800px"></p>
 	
