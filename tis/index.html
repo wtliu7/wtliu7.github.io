@@ -175,27 +175,27 @@
             <tbody><tr>
                     <td align="center" width="160px">
               <center>
-                <span style="font-size:16px"><a href="https://xiaoman-zhang.github.io/">Wnetao Liu</a><sup>1</sup></span>
+                <span style="font-size:16px">Wnetao Liu</a><sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="160px">
               <center>
-                <span style="font-size:16px"><a href="https://weidixie.github.io/">Chaofan Ma</a><sup>1</sup></span>
+                <span style="font-size:16px">Chaofan Ma</a><sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="160px">
               <center>
-                <span style="font-size:16px"><a href="https://scholar.google.com/citations?user=BAZSE7wAAAAJ&hl=fr">Yuhuan Yang</a><sup>1</sup></span>
+                <span style="font-size:16px">Yuhuan Yang</a><sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="160px">
 	      <center>
-                <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>1</sup></span>
+                <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>1,2</sup></span>
                 </center>
 		</td>
                     <td align="center" width="160px">	    
               <center>
-                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/">Ya Zhang</a><sup>1</sup></span>
+                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/">Ya Zhang</a><sup>1,2</sup></span>
                 </center>
             </tr>
 
@@ -208,6 +208,11 @@
                     <span style="font-size:16px"><sup>1</sup>CMIC, Shanghai Jiao Tong University</span>
                 </center>
                 </td>
+                <td align="center" width="300px">
+                  <center>
+                        <span style="font-size:16px"><sup>2</sup>Shanghai AI Laboratory</span>
+                    </center>
+                    </td>
         </tr></tbody></table>
 	
 	<table align="center" width="700px">
@@ -247,73 +252,34 @@
       <left>
 	      The goal of this paper is to interactively refine the automaticsegmentation on challenging structures that fall behind human perfor-mance, either due to the scarcity of available annotations or the difficultynature of the problem itself, for example, on segmenting cancer or smallorgans. Specifically, we propose a novelTransformer-based architectureforInteractiveSegmentation (TIS), that treats the refinement task as aprocedure for grouping pixels with similar feature representation to thoseclicks given by the end users. Our proposed architecture is composedof two variants of Transformer Decoder, which naturally fulfills featurecomparison with the attention mechanisms. In contrast to existing ap-proaches, our proposed TIS is not limited to binary segmentations, andallows the user to edit the masks of arbitrary number of categories. Tovalidate the proposed approach, we conduct extensive experiments onthree challenging datasets and demonstrate superior performance overthe existing state-of-the-art methods.
       </left></p>
-      <p><img class="left"  src="./resources/framework.png" width="800px"></p>
 	
       <br><hr>
-      <center> <h2> Data Synthesis </h2> </center>
+      <center> <h2> Method </h2> </center>
       <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-	  Illustration of the data simulation pipeline.
-	  (a) Data simulation pipeline. We first simulate the tumor with a transformed image and a generated 3D mask, which provide texture and shape respectively. Then the synthetic data is composed by blending the simulated tumor into the normal image.
-	  (b) Visualisation of shape simulation. The first row presents the 3D polyhedrons with various shapes, sizes and locations, and the second row shows the binary masks.
-	  (c) Visualisation of texture simulation. We have displayed a randomly selected normal image undergoing different transformations functions (top row), the corresponding simulated tumor (second row), and synthetic training data (bottom row) in columns 2-8. 
+        Structure of our method. (a) Overview of the whole framework. (b) Structureof click encoding module. (d) Structure of label assignment module. 
 	</left></p>
-        <p><img class="left"  src="./resources/supple_fig_datasyn.png" width="800px"></p>
+        <p><img class="left"  src="./resources/framework.png" width="800px"></p>
       <br>
       <hr>
 
-      <center><h2>Visualizations of Zero-shot Tumor Segmentation </h2></center>
-      <p><b>2D Visualization </b> </p>
-      <p><left>
-	      From left to right: input volume, ground truth (green) vs. predicted mask (red), reconstructed normal organ, reconstructed tumor, predicted mask.
-      </left></p>
-      <p><img class="center"  src="./resources/result.png" width="800px"></p>
-	
-      <p><b>3D Visualization </b> </p>
-      <p><left>
-	      From left to right: input volume, ground truth, reconstructed normal organ, reconstructed tumor, predicted mask.
-      </left></p>
-      <p><img class="left"  src="./resources/result_bt/concat_30.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_bt/concat_5.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_lits/concat_4.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_lits/concat_8.gif" width="800px"></p>
-      <br>
-      <hr>
+      
 
       <center><h2>Results</h2></center>
-      <p><b>R1: Fully Supervised Fine-tuning </b> </p>
+      <p><b>R1: Compared with baselines </b> </p>
       <p><left>
-	      Compare with SOTA self-supervised methods on WTS (brain whole tumor segmentation) and LTS (liver tumor segmentation).
+	      Performances of different methods on three datasets with 10 clicks.
       </left></p>
-      <p><img class="center"  src="./resources/table_1.png" width="800px"></p>
+      <p><img class="center"  src="./resources/table1.png" width="800px"></p>
       <p><left>
-	      Compare with SOTA self-supervised methods on BTS (Whole tumor, Tumor core and Enhanced tumor segmentation).
+	      Improvements in one interactive sequence of different methods on three datasets(four structures).
       </left></p>
-      <p><img class="center"  src="./resources/table_2.png" width="800px"></p>
+      <p><img class="center"  src="./resources/improvements.png" width="800px"></p>
 	
-      <p><b>R2: Analysis of Model Transferability </b> </p>	
-	<div class="container">
-		<div class="image">
-			<img style="width:400px" src='./resources/result_2.png'></img>
-		</div>
-		<div class="text"> 
-			<p> We study the usefulness of self-supervised learning by varying the number of available volume annotations. 
-				For both tasks, our proposed method shows superior performance on all supervision level.  
-			</p>
-		</div>
-	</div>
-      <p><img class="center"  src="./resources/table_3.png" width="800px"></p>
-	
-      <p><b>R3: Results of Zero-shot Tumor Segmentation </b></p>
-	<div class="container">
-		<div class="image">
-			<img style="width:400px" src='./resources/table.png'></img>
-		</div>
-		<div class="text"> 
-			<p>  We compare with approaches that advocate zero-shot tumor segmentation, <i>i.e.</i> the state-of-the-art unsupervised anomaly segmentation methods.
-				As shown in the Table, our approach surpasses the other ones by a large margin.
-			</p>
-		</div>
-	</div>
+      <p><b>R2: Visualization </b> </p>	
+      <p><left>
+	      Visualization of qualitative comparison on three datasets (four structures).
+      </left></p>
+      <p><img class="center"  src="./resources/vis_single.png" width="800px"></p>
       
       <br>
       <hr>
@@ -322,8 +288,6 @@
 	      Based on a template by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a>.
       </p>
       <br>
-
-
 <br>
 </body>
 </html>
